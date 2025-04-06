@@ -24,28 +24,35 @@ Mercatus is an open-source AI agent framework built with OpenAI's Agents SDK. It
 - Node.js (for MCP tools)
 
 ### Setup
+1. Install uv (A fast Python package installer and resolver):
 
-1. Clone the repository:
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+2. Clone the repository:
 
 ```bash
 git clone https://github.com/yourusername/Mercatus.git
 cd Mercatus
 ```
 
-2. Create a virtual environment:
+3. Create a virtual environment:
 
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+uv venv --python 3.12
+source .venv/bin/activate  # On Unix/macOS
+# Or on Windows:
+# .venv\Scripts\activate
 ```
 
-3. Install dependencies:
+4. Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 ```
 
-4. Install browser automation tools (optional but recommended):
+5. Install browser automation tools (optional but recommended):
 
 ```bash
 playwright install
